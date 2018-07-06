@@ -1,0 +1,333 @@
+<?php
+
+	require_once("../support/config.php");
+	if(!isLoggedIn()){
+		toLogin();
+		die();
+	  }
+	$errors="";
+	$inputs=$_POST;
+	$check=$con->myQuery("SELECT COUNT(id) as id FROM loan_list WHERE  DATE_FORMAT(`date_applied`,'%Y%m')= DATE_FORMAT(CURDATE(),'%Y%m') AND is_deleted=0")->fetch(PDO::FETCH_ASSOC);
+	$app_no=sprintf('%03d', $check['id']+1);
+	var_dump($app_no);
+	// 	if($check['id']>='2'){
+	// 		$status_id='1';
+	// 	}else{
+	// 		$status_id='0';
+	// 	}
+		if($errors!="")
+		{
+			Alert("You have the following errors: <br/>".$errors,"danger");
+				if(empty($_POST['id'])){
+				redirect("create_loan.php");}
+				else{
+				redirect("create_loan.php?id=".$_POST['id']);}
+			die;
+		}else{
+			if($inputs['same_add']=='on'){
+				$inputs['bus_no']=$inputs['home_no'];
+				$inputs['bus_brgy']=$inputs['home_brgy'];
+				$inputs['bus_city']=$inputs['home_city'];
+				$inputs['bus_zip']=$inputs['home_zip'];
+				$inputs['same_add']='checked';
+			}else{
+				$inputs['same_add']='';
+			}
+			if($inputs['same_add1']=='on'){
+				$inputs['gar_no']=$inputs['home_no'];
+				$inputs['gar_brgy']=$inputs['home_brgy'];
+				$inputs['gar_city']=$inputs['home_city'];
+				$inputs['gar_zip']=$inputs['home_zip'];
+				$inputs['same_add1']='checked';
+			}else{
+				$inputs['same_add1']='';
+			}
+			if($inputs['is_borrower']=='on'){
+				$inputs['is_borrower']='checked';
+			}
+			if($inputs['is_dealer']=='on'){
+				$inputs['is_dealer']='checked';
+			}
+			if($inputs['is_salesman']=='on'){
+				$inputs['is_salesman']='checked';
+			}
+
+		$con->beginTransaction();
+		try {
+			if(empty($_POST['id'])){
+					$inputs['applied_by']=$_SESSION[WEBAPP]['user']['user_id'];
+					$params2=array(
+						"id"=>$inputs['client_no'],
+						"applied_by"=>$inputs['applied_by'],
+						"last_name"=>$inputs['lname'],
+						"first_name"=>$inputs['fname'],
+						"spouse"=>$inputs['spouse'],
+						"bus_tel"=>$inputs['bus_tel'],
+						"home_tel"=>$inputs['home_tel'],
+						"home_no"=>$inputs['home_no'],
+						"home_brgy"=>$inputs['home_brgy'],
+						"home_city"=>$inputs['home_city'],
+						"home_zip"=>$inputs['home_zip'],
+						"bus_no"=>$inputs['bus_no'],
+						"bus_brgy"=>$inputs['bus_brgy'],
+						"bus_city"=>$inputs['bus_city'],
+						"bus_zip"=>$inputs['bus_zip'],
+						"same_add"=>$inputs['same_add']
+					);
+					$params3=array(
+						"applied_by"=>$inputs['applied_by'],
+						"last_name"=>$inputs['lname'],
+						"first_name"=>$inputs['fname'],
+						"spouse"=>$inputs['spouse'],
+						"bus_tel"=>$inputs['bus_tel'],
+						"home_tel"=>$inputs['home_tel'],
+						"home_no"=>$inputs['home_no'],
+						"home_brgy"=>$inputs['home_brgy'],
+						"home_city"=>$inputs['home_city'],
+						"home_zip"=>$inputs['home_zip'],
+						"bus_no"=>$inputs['bus_no'],
+						"bus_brgy"=>$inputs['bus_brgy'],
+						"bus_city"=>$inputs['bus_city'],
+						"bus_zip"=>$inputs['bus_zip'],
+						"same_add"=>$inputs['same_add']
+					);
+					if($inputs['cli_stat']=='0'){
+						$con->myQuery("INSERT INTO
+							client_list(
+								lname,
+								fname,
+								spouse,
+								bus_tel,
+								home_tel,
+								applied_by,
+								applied_date,
+								home_no,
+								home_brgy,
+								home_city,
+								home_zip,
+								bus_no,
+								bus_brgy,
+								bus_city,
+								bus_zip,
+								same_add
+							) VALUES(
+								:last_name,
+								:first_name,
+								:spouse,
+								:bus_tel,
+								:home_tel,
+								:applied_by,
+								CURDATE(),
+								:home_no,
+								:home_brgy,
+								:home_city,
+								:home_zip,
+								:bus_no,
+								:bus_brgy,
+								:bus_city,
+								:bus_zip,
+								:same_add
+							)",$params3);
+							$cli_no=$con->lastInsertId();
+					}else{
+							$con->myQuery("UPDATE
+								client_list SET
+									lname=:last_name,
+									fname=:first_name,
+									spouse=:spouse,
+									bus_tel=:bus_tel,
+									home_tel=:home_tel,
+									date_modified=CURDATE(),
+									home_no=:home_no,
+									home_brgy=:home_brgy,
+									home_city=:home_city,
+									home_zip=:home_zip,
+									bus_no=:bus_no,
+									bus_brgy=:bus_brgy,
+									bus_city=:bus_city,
+									bus_zip=:bus_zip,
+									same_add=:same_add,
+									applied_by=:applied_by
+									WHERE client_number=:id
+					",$params2);
+					$cli_no=$inputs['client_no'];
+					}
+					$params1=array(
+					"applied_by"=>$inputs['applied_by'],
+					"app_type"=>$inputs['app_type'],
+					"client_no"=>$cli_no,
+					"last_name"=>$inputs['lname'],
+					"first_name"=>$inputs['fname'],
+					"spouse"=>$inputs['spouse'],
+					"loan_type"=>$inputs['loan_type'],
+					"cre_fac"=>$inputs['cre_fac'],
+					"pro_line"=>$inputs['pro_line'],
+					"mar_type"=>$inputs['mar_type'],
+					"col_code"=>$inputs['col_code'],
+					"bus_add"=>$inputs['bus_add'],
+					"home_add"=>$inputs['home_add'],
+					"email"=>$inputs['email'],
+					"bus_tel"=>$inputs['bus_tel'],
+					"home_tel"=>$inputs['home_tel'],
+					"pri_con"=>$inputs['pri_con'],
+					"sec_con"=>$inputs['sec_con'],
+					"dealer"=>$inputs['dealer'],
+					"salesman"=>$inputs['salesman'],
+					"unit_desc"=>$inputs['unit_desc'],
+					"amt_fin"=>$inputs['amt_fin'],
+					"res_val"=>$inputs['res_val'],
+					"down_pay"=>$inputs['down_pay'],
+					"list_pri"=>$inputs['list_pri'],
+					"term"=>$inputs['term'],
+					"int_rate"=>$inputs['int_rate'],
+					"mon_amor"=>$inputs['mon_amor']
+					);
+					$con->myQuery("INSERT INTO
+								loan_list(
+									app_type,
+									app_no,
+									client_no,
+									last_name,
+									first_name,
+									spouse,
+									loan_type_id,
+									credit_fac_id,
+									prod_line_id,
+									mark_type_id,
+									coll_code_id,
+									bus_add,
+									home_add,
+									email_add,
+									bus_tel,
+									home_tel,
+									pri_con,
+									sec_con,
+									applied_by,
+									date_applied,
+									dealer_id,
+									salesman_id,
+									unit_desc,
+									amt_fin,
+									res_val,
+									down_pay,
+									list_pri,
+									term,
+									int_rate,
+									mon_amor
+								) VALUES(
+									:app_type,
+									CONCAT(DATE_FORMAT(CURDATE(),'%Y%m'),'$app_no'),
+									:client_no,
+									:last_name,
+									:first_name,
+									:spouse,
+									:loan_type,
+									:cre_fac,
+									:pro_line,
+									:mar_type,
+									:col_code,
+									:bus_add,
+									:home_add,
+									:email,
+									:bus_tel,
+									:home_tel,
+									:pri_con,
+									:sec_con,
+									:applied_by,
+									CURDATE(),
+									:dealer,
+									:salesman,
+									:unit_desc,
+									:amt_fin,
+									:res_val,
+									:down_pay,
+									:list_pri,
+									:term,
+									:int_rate,
+									:mon_amor
+								)",$params1);
+								// $con->myQuery("UPDATE client_list SET status_id=?
+								// WHERE client_number=?",array($status_id,$inputs['client_no']));
+
+			Alert("Successfully Added.","success");}
+			else{
+					$params1=array(
+					"id"=>$inputs['id'],
+					"app_type"=>$inputs['app_type'],
+					"app_no"=>$inputs['app_no'],
+					"client_no"=>$inputs['client_no'],
+					"last_name"=>$inputs['lname'],
+					"first_name"=>$inputs['fname'],
+					"spouse"=>$inputs['spouse'],
+					"loan_type"=>$inputs['loan_type'],
+					"cre_fac"=>$inputs['cre_fac'],
+					"pro_line"=>$inputs['pro_line'],
+					"mar_type"=>$inputs['mar_type'],
+					"col_code"=>$inputs['col_code'],
+					"bus_add"=>$inputs['bus_add'],
+					"home_add"=>$inputs['home_add'],
+					"email"=>$inputs['email'],
+					"bus_tel"=>$inputs['bus_tel'],
+					"home_tel"=>$inputs['home_tel'],
+					"pri_con"=>$inputs['pri_con'],
+					"sec_con"=>$inputs['sec_con'],
+					"dealer"=>$inputs['dealer'],
+					"salesman"=>$inputs['salesman'],
+					"unit_desc"=>$inputs['unit_desc'],
+					"amt_fin"=>$inputs['amt_fin'],
+					"res_val"=>$inputs['res_val'],
+					"down_pay"=>$inputs['down_pay'],
+					"list_pri"=>$inputs['list_pri'],
+					"term"=>$inputs['term'],
+					"int_rate"=>$inputs['int_rate'],
+					"mon_amor"=>$inputs['mon_amor']
+					);
+					$con->myQuery("UPDATE
+								loan_list SET
+									app_type=:app_type,
+									app_no=:app_no,
+									client_no=:client_no,
+									last_name=:last_name,
+									first_name=:first_name,
+									spouse=:spouse,
+									loan_type_id=:loan_type,
+									credit_fac_id=:cre_fac,
+									prod_line_id=:pro_line,
+									mark_type_id=:mar_type,
+									coll_code_id=:col_code,
+									bus_add=:bus_add,
+									home_add=:home_add,
+									email_add=:email,
+									bus_tel=:bus_tel,
+									home_tel=:home_tel,
+									pri_con=:pri_con,
+									sec_con=:sec_con,
+									date_modified=CURDATE(),
+									dealer_id=:dealer,
+									salesman_id=:salesman,
+									unit_desc=:unit_desc,
+									amt_fin=:amt_fin,
+									res_val=:res_val,
+									down_pay=:down_pay,
+									list_pri=:list_pri,
+									term=:term,
+									int_rate=:int_rate,
+									mon_amor=:mon_amor
+									WHERE id=:id
+								",$params1);
+								$con->myQuery("UPDATE client_list SET status_id=?
+								WHERE client_number=?",array($status_id,$inputs['client_no']));
+			Alert("Successfully Updated.","success");}
+					
+			$con->commit();
+			redirect("loan_management.php");
+			die;
+		} catch (Exception $e) {
+			$db->rollBack();
+			Alert('Please try again.',"danger");
+			redirect("create_loan.php");
+			die;
+		}
+	}
+?>
+

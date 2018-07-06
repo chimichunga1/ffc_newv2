@@ -1,0 +1,734 @@
+{
+    "data": [
+        [
+            "NONE",
+            "INITIAL START UP",
+            "2018-03-03 00:36:15"
+        ]
+   ,[
+    "Admins, Admin",
+    " Archived the audit logs.",
+    "2018-03-03 00:36:15"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 00:39:58"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 00:41:40"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 00:41:45"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 00:41:49"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 00:42:00"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 00:42:11"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 00:42:16"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 00:42:22"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 00:42:30"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 00:47:43"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 00:49:28"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged in.",
+    "2018-03-03 00:49:42"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 00:52:11"
+]
+,[
+    "president, a",
+    " Logged in.",
+    "2018-03-03 00:52:46"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged out.",
+    "2018-03-03 00:58:41"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 00:58:48"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 01:01:32"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 01:03:19"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 01:07:03"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 01:08:41"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 01:42:32"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 01:43:02"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-03 08:48:59"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 08:51:42"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 09:47:49"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-03 10:27:03"
+]
+,[
+    "Admins, Admin",
+    " Add User named .",
+    "2018-03-03 10:54:15"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 10:55:14"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 10:55:19"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:00:18"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 11:02:46"
+]
+,[
+    "Sample, Sample",
+    " Logged in.",
+    "2018-03-03 11:02:54"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:04:29"
+]
+,[
+    "Sample, Sample",
+    " Logged out.",
+    "2018-03-03 11:04:49"
+]
+,[
+    "president, a",
+    " Logged in.",
+    "2018-03-03 11:04:58"
+]
+,[
+    "president, a",
+    " Logged out.",
+    "2018-03-03 11:06:09"
+]
+,[
+    "Sample, Sample",
+    " Logged in.",
+    "2018-03-03 11:06:16"
+]
+,[
+    "Sample, Sample",
+    " Logged out.",
+    "2018-03-03 11:06:37"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:06:44"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 11:17:31"
+]
+,[
+    "Sample, Sample",
+    " Logged in.",
+    "2018-03-03 11:17:38"
+]
+,[
+    "Sample, Sample",
+    " Logged out.",
+    "2018-03-03 11:18:13"
+]
+,[
+    "president, a",
+    " Logged in.",
+    "2018-03-03 11:18:20"
+]
+,[
+    "president, a",
+    " Logged out.",
+    "2018-03-03 11:18:30"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:18:35"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 11:19:40"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged in.",
+    "2018-03-03 11:19:46"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged out.",
+    "2018-03-03 11:22:33"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:22:38"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:22:53"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:31:06"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 11:32:15"
+]
+,[
+    "Sample, Sample",
+    " Logged in.",
+    "2018-03-03 11:50:53"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-02 09:34:08"
+]
+	,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 19:14:58"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 19:16:57"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-03 19:17:06"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 19:25:43"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 19:25:56"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 19:48:08"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-03 19:48:17"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 20:01:13"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 20:01:20"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 20:28:23"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 20:52:05"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 20:57:51"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged in.",
+    "2018-03-03 20:57:59"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged out.",
+    "2018-03-03 21:02:13"
+]
+,[
+    "president, a",
+    " Logged in.",
+    "2018-03-03 21:02:19"
+]
+,[
+    "president, a",
+    " Logged out.",
+    "2018-03-03 21:09:39"
+]
+,[
+    "Sample, Sample",
+    " Logged in.",
+    "2018-03-03 21:13:06"
+]
+,[
+    "Sample, Sample",
+    " Logged out.",
+    "2018-03-03 21:15:25"
+]
+,[
+    "president, a",
+    " Logged in.",
+    "2018-03-03 21:15:33"
+]
+,[
+    "president, a",
+    " Logged out.",
+    "2018-03-03 22:08:02"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-03 22:08:17"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-03 22:09:05"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-03 22:09:13"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-03 22:37:49"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-03 22:38:01"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-04 01:02:45"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-04 01:03:03"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-04 08:20:37"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-04 08:20:45"
+]
+,[
+    "Admins, Admin",
+    " Add User named .",
+    "2018-03-04 08:21:10"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-04 08:21:14"
+]
+,[
+    "test, TEST",
+    " Logged in to set Account.",
+    "2018-03-04 08:21:21"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-08 23:36:32"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 00:34:07"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-09 00:34:15"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-09 02:12:40"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 10:24:12"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 10:33:54"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-09 10:34:05"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-09 11:27:57"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-09 11:28:35"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 11:28:42"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 11:28:42"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-09 11:46:58"
+]
+,[
+    "Sample, Sample",
+    " Logged in.",
+    "2018-03-09 11:47:07"
+]
+,[
+    "Sample, Sample",
+    " Logged out.",
+    "2018-03-09 12:18:45"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 12:18:54"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 12:19:42"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged in.",
+    "2018-03-09 12:19:50"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 13:24:01"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-09 13:24:05"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-09 13:24:11"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged in.",
+    "2018-03-09 13:24:27"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-09 17:59:23"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-09 18:01:21"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 18:01:32"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 18:05:19"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 21:50:29"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 22:04:31"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 22:25:40"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-09 22:25:49"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-09 22:47:23"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 22:47:32"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 22:52:55"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged in.",
+    "2018-03-09 22:53:03"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged out.",
+    "2018-03-09 23:04:28"
+]
+,[
+    "Admins, Admin",
+    " Logged in.",
+    "2018-03-09 23:04:38"
+]
+,[
+    "Admins, Admin",
+    " Logged out.",
+    "2018-03-09 23:16:57"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-09 23:17:04"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged out.",
+    "2018-03-09 23:17:12"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged in.",
+    "2018-03-09 23:17:29"
+]
+,[
+    "CHICANO, MHAR VIC",
+    " Logged out.",
+    "2018-03-10 00:11:49"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-10 00:11:55"
+]
+,[
+    "Testla1ss, Test1",
+    " Logged in.",
+    "2018-03-26 10:25:57"
+]
+,[
+    ", ",
+    " Logged in.",
+    "2018-03-30 14:13:34"
+]
+,[
+    ", ",
+    " Logged out.",
+    "2018-03-30 14:18:44"
+]
+,[
+    ", CJAY CONOCONO",
+    " Logged in.",
+    "2018-03-30 14:18:49"
+]
+,[
+    ", CJAY CONOCONO",
+    " Logged out.",
+    "2018-03-30 14:19:47"
+]
+,[
+    ", CJAY CONOCONO",
+    " Logged in.",
+    "2018-03-30 14:20:04"
+]
+,[
+    ", CJAY CONOCONO",
+    " Logged out.",
+    "2018-03-30 14:22:59"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged in.",
+    "2018-03-30 14:24:25"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged in.",
+    "2018-03-31 15:44:18"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged out.",
+    "2018-03-31 15:48:02"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged in.",
+    "2018-03-31 15:48:07"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged out.",
+    "2018-03-31 15:48:25"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged in.",
+    "2018-03-31 15:48:30"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged out.",
+    "2018-03-31 15:48:33"
+]
+,[
+    "CONOCONO, CJAY",
+    " Logged in.",
+    "2018-03-31 15:57:53"
+]
+,[
+    "CONOCONO, CJAY",
+    " Update User ID .",
+    "2018-04-01 01:43:26"
+]
+,[
+    "CONOCONO, CJAY",
+    " Add User named .",
+    "2018-04-01 17:04:33"
+]
+	]
+}

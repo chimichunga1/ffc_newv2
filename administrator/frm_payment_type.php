@@ -1,0 +1,74 @@
+<?php
+require_once("../support/config.php");
+
+if(!isLoggedIn()){
+  toLogin();
+  die();
+}
+
+if(!AllowUser(array(1))){
+  redirect("../index.php");
+}
+
+makeHead("Frm Payment Type",1);
+
+require_once("../template/header.php");
+require_once("../template/sidebar.php");
+if (!empty($_GET['id'])) {
+	$data=$con->myQuery("SELECT * FROM payment_type WHERE id=?",array($_GET['id']))->fetch(PDO::FETCH_ASSOC);
+
+}
+
+?>
+
+<div class="content-wrapper">
+
+<section class="content-header">
+	<?php
+		Alert();
+		
+	?>
+	<div class="box">
+	<div class="box-body">
+	<center>
+	<h3> Payment Type Form </h3>
+	</center>
+	<hr>
+			<div class="row">
+                <form action="save_payment_type.php" method="post" class="form-horizontal" id='frmclear'>
+                  <input type='hidden' name='id' id='id' value="<?php echo !empty($_GET['id'])?htmlspecialchars($_GET['id']):''?>">
+                	 <div class='form-group'>
+                     <label class="col-md-4 control-label">Payment Type Code: </label>
+                      <div class="col-md-5">
+                          <input type="text" class="form-control" name='payment_code' placeholder="Payment Type Code" value='<?php echo !empty($data)?htmlspecialchars($data['code']):''; ?>' required>
+                      </div>
+                  </div>
+                   <div class='form-group'>
+                     <label class="col-md-4 control-label">Payment Type Name: </label>
+                      <div class="col-md-5">
+                          <input type="text" class="form-control" name='payment_name' placeholder="Payment Type Name" value='<?php echo !empty($data)?htmlspecialchars($data['name']):''; ?>' required>
+                      </div>
+                  </div> 
+                  <div class="col-sm-11 col-md-offset-1 text-center">
+                    <button type='submit' class='btn btn-primary'>Save </button>
+                    <a href='payment_type.php' class='btn btn-default'>Cancel</a><br>
+                </div>
+                </form>
+            </div>		
+		</div>
+	</div>
+	</div>
+</section>
+
+ 
+</div>
+
+
+
+<script type="text/javascript">
+
+</script>
+<?php
+Modal();
+makeFoot(WEBAPP,1);
+?>
